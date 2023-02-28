@@ -64,6 +64,7 @@ export default async () => {
       output: {
         file: `dist/esm/${outputFileName}.js`,
         format: "esm",
+        sourcemap: true,
         preferConst: true,
         exports: "named",
         banner
@@ -77,6 +78,7 @@ export default async () => {
       output: {
         file: `dist/${outputFileName}.js`,
         name,
+        sourcemap: true,
         format: "umd",
         exports: "default",
         banner
@@ -91,6 +93,7 @@ export default async () => {
       output: {
         file: `dist/browser/${name}.cjs`,
         name,
+        sourcemap: true,
         format: "cjs",
         exports: "default",
         banner
@@ -103,6 +106,7 @@ export default async () => {
       output: {
         file: `dist/node/${name}.cjs`,
         format: "cjs",
+        sourcemap: true,
         preferConst: true,
         exports: "default",
         banner
